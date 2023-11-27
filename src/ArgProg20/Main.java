@@ -2,6 +2,8 @@ package ArgProg20;
 
 import java.util.List;
 import static ArgProg20.Act2.transformarStrings;
+import static ArgProg20.Act3.filtrarPorCaracter;
+import static ArgProg20.Act3.stringMayusc;
 
 
 public class Main {
@@ -30,7 +32,7 @@ public class Main {
         System.out.println(inscripcion2 + " - Aprobada: " + inscripcion2.aprobada());*/
 
         //Main Act 2
-        List<String> listaOriginal = List.of("Hola", "Mundo", "Java");
+        /*List<String> listaOriginal = List.of("Hola", "Mundo", "Java");
 
 
         FuncionTransformarString toUpperCaseFunction = String::toUpperCase;
@@ -38,7 +40,30 @@ public class Main {
         // Aplica la transformación y muestra el resultado
         List<String> listaTransformada = transformarStrings(listaOriginal, toUpperCaseFunction);
         System.out.println("Lista original: " + listaOriginal);
-        System.out.println("Lista transformada: " + listaTransformada);
+        System.out.println("Lista transformada: " + listaTransformada);*/
+
+        //Main Act 3
+
+        List<String> strings = List.of("perro","gato","pajaro","avion");
+        List<String> mayuscStrings = stringMayusc(strings);
+        int longitudMinima = 5;
+        String resultado = filtrarPorCaracter(strings, longitudMinima);
+
+        System.out.println("Ejercicio 1");
+        System.out.println("Lista original: "+strings);
+        System.out.println("Lista mayusculas: "+mayuscStrings);
+        System.out.println("--------------------------------------------------");
+        System.out.println("Ejercicio 2");
+        System.out.println("Lista original: "+strings);
+        System.out.println("palabras con mas de 5 caracteres: " +resultado);
+
+
+
+
+
+
+
+
     }
 
 }
